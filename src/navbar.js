@@ -4,14 +4,14 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 
 //import Restaurants from 'Restaurants';
 //import Recherche from 'Recherche';
-//import Formulaire from 'Formulaire';
+import ContactForm from './components/ContactForm';
 
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
   return (
     <Tab.Navigator
-      initialRouteName="Restaurants"
+      initialRouteName="ContactForm"
       screenOptions={{
         tabBarActiveTintColor: '#e91e63',
       }}
@@ -38,10 +38,10 @@ function MyTabs() {
         }}
       />
       <Tab.Screen
-        name="Formulaire"
-        component={Formulaire}
+        name="ContactForm"
+        component={ContactForm}
         options={{
-          tabBarLabel: 'Formulaire',
+          tabBarLabel: 'ContactForm',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="account" color={color} size={size} />
           ),
