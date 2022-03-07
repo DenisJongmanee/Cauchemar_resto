@@ -2,8 +2,8 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-//import Restaurants from 'Restaurants';
-//import Recherche from 'Recherche';
+import Recherche from'./components/Recherche';
+import Restaurants from'./components/Restaurants';
 import ContactForm from './components/ContactForm';
 
 const Tab = createBottomTabNavigator();
@@ -13,7 +13,7 @@ function MyTabs() {
     <Tab.Navigator
       initialRouteName="ContactForm"
       screenOptions={{
-        tabBarActiveTintColor: '#e91e63',
+        tabBarActiveTintColor: '#2b8eff',
       }}
     >
       <Tab.Screen
@@ -22,7 +22,7 @@ function MyTabs() {
         options={{
           tabBarLabel: 'Restaurants',
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" color={color} size={size} />
+            <MaterialCommunityIcons name="silverware" color={color} size={size} />
           ),
         }}
       />
@@ -32,18 +32,17 @@ function MyTabs() {
         options={{
           tabBarLabel: 'Recherche',
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="bell" color={color} size={size} />
+            <MaterialCommunityIcons name="magnify" color={color} size={size} />
           ),
-          tabBarBadge: 3,
         }}
       />
       <Tab.Screen
-        name="ContactForm"
+        name="Contact"
         component={ContactForm}
         options={{
-          tabBarLabel: 'ContactForm',
+          tabBarLabel: 'Contact',
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="account" color={color} size={size} />
+            <MaterialCommunityIcons name="email" color={color} size={size} />
           ),
         }}
       />
