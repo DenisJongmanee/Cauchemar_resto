@@ -5,12 +5,13 @@ import reactDom from 'react-dom';
     import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import Position from 'react-native/Libraries/Components/Touchable/Position';
 import ListeRestau from './ListeRestau';
+import Restaurant from './Restau';
 
 class Recherche extends Component {
 
     state = {
         recherche: "",
-        restaurants: this.props.restaurants
+        restaurants: []
     }
 
     render() {
@@ -20,16 +21,20 @@ class Recherche extends Component {
                     <ScrollView>
                         <TextInput style={styles.input}
                             value = {this.state.recherche}
-                            onChangeText={(recherche)=> this.setState({ recherche: recherche })} 
+                            onChangeText={(recherche)=> this.setState({ recherche: recherche })}
                         />
-                        <Pressable style={styles.button} onPress={this.verification}>
+                        <Pressable style={styles.button} onPress={this.filtre}>
                             <Text style={styles.textButton}>Rechercher</Text>
                         </Pressable>
-                        <ListeRestau restaurants={this.state.restaurants.filter(restaurant=>restaurant.ville === this.recherche)}/>
+                        <ListeRestau restaurants={this.state.restaurants}/>
                     </ScrollView>
                 </View>
             </KeyboardAwareScrollView>
         );
+    }
+
+    filtre = () => {
+        this.setState({ restaurants: this.props.restaurants.filter(restaurant => restaurant.ville === this.state.recherche) })
     }
 
 }
