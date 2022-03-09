@@ -1,12 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import ListRestau from "./src/components/ListeRestau";
 
 export default function App() {
+  const restaurants = [
+      {id:1,image:require("./assets/restaurant1.png"),titre: "Bonjour", description: "description"},
+      {id:1,image:require("./assets/restaurant1.png"),titre: "Bonjour", description: "description"},
+      {id:1,image:require("./assets/restaurant1.png"),titre: "Bonjour", description: "description"}
+    ]
   return (
+
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <ListRestau restaurants={restaurants}></ListRestau>
     </View>
   );
 }
