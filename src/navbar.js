@@ -13,7 +13,7 @@ function MyTabs() {
   const restaurants = [
     {id:1,image:require("../assets/restaurant1.png"),titre: "Bonjour", description: "description"},
     {id:2,image:require("../assets/restaurant1.png"),titre: "Bonjour", description: "description"},
-    {id:3,image:require("../assets/restaurant1.png"),titre: "Bonjour", description: "description description descriptiondescription anticonstitutionnellement criptiondescription"}
+    {id:3,image:require("../assets/restaurant1.png"),titre: "Bonjour", description: "description"}
   ]
 
   return (
