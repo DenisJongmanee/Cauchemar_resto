@@ -1,13 +1,13 @@
 import React from 'react'
-import { View, StyleSheet, Image } from 'react-native'
+import { View, StyleSheet, ScrollView } from 'react-native'
 import Restaurant from './Restau'
 
 const ListeRestau = ({ restaurants }) => (
-  <View style={styles.list}>
+  <ScrollView style={styles.list}>
     {restaurants.map(restaurant => (
       <Restaurant key={restaurant.id} restaurant={restaurant}   />
     ))}
-  </View>
+  </ScrollView>
 )
 
 const styles = StyleSheet.create({

@@ -37,7 +37,7 @@ function MyTabs() {
       />
       <Tab.Screen
         name="Recherche"
-        component={Recherche}
+        children={()=><Recherche restaurants={restaurants}/>} 
         options={{
           tabBarLabel: 'Recherche',
           tabBarIcon: ({ color, size }) => (

@@ -23,7 +23,7 @@ class Restaurant extends Component {
           <View >
             <Text style={styles.titre}>{restau.titre}</Text>
           </View>
-          <View>
+          <View style={styles.description}>
             <Text>{restau.description}</Text>
           </View>
         </View>
@@ -46,11 +46,13 @@ const styles = StyleSheet.create({
     height:100
   },
   text: {
-    marginRight:60,
     marginLeft:10
   },
   titre: {
     fontWeight:'bold'
+  },
+  description: {
+    marginRight:170
   }
 })
 
