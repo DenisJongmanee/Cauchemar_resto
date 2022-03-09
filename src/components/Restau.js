@@ -17,17 +17,17 @@ class Restaurant extends Component {
   render() {
     const {restau} = this.state;
     return (
-
       <View style={styles.restau}>
-            <Image style={styles.image} source={restau.image}/>
-
-            <Text>{restau.titre}{"\n"}
-            {restau.description}</Text>
-
-            
-
+        <Image style={styles.image} source={restau.image}/>
+        <View style={styles.text}>
+          <View >
+            <Text style={styles.titre}>{restau.titre}</Text>
+          </View>
+          <View>
+            <Text>{restau.description}</Text>
+          </View>
+        </View>
       </View>
-      
     )
   }
 }
@@ -44,6 +44,13 @@ const styles = StyleSheet.create({
   image: {
     width:180,
     height:100
+  },
+  text: {
+    marginRight:60,
+    marginLeft:10
+  },
+  titre: {
+    fontWeight:'bold'
   }
 })
 

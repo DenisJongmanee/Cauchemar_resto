@@ -3,7 +3,7 @@ import { View, StyleSheet, Image } from 'react-native'
 import Restaurant from './Restau'
 
 const ListeRestau = ({ restaurants }) => (
-  <View style={styles.todoList}>
+  <View style={styles.list}>
     {restaurants.map(restaurant => (
       <Restaurant key={restaurant.id} restaurant={restaurant}   />
     ))}
@@ -11,9 +11,8 @@ const ListeRestau = ({ restaurants }) => (
 )
 
 const styles = StyleSheet.create({
-  todoList: {
-    flex: 1,
-    alignItems: 'stretch'
+  list: {
+    margin:10
   }
 })
 
