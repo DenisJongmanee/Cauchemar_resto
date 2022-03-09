@@ -5,11 +5,6 @@ import {NavigationContainer} from '@react-navigation/native'
 import MyTabs from './src/navbar';
 
 export default function App() {
-  const restaurants = [
-      {id:1,image:require("./assets/restaurant1.png"),titre: "Bonjour", description: "description"},
-      {id:1,image:require("./assets/restaurant1.png"),titre: "Bonjour", description: "description"},
-      {id:1,image:require("./assets/restaurant1.png"),titre: "Bonjour", description: "description"}
-    ]
   return (
     <NavigationContainer>
       <MyTabs />

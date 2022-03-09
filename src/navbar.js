@@ -3,12 +3,19 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import Recherche from'./components/Recherche';
-import Restaurants from'./components/Restaurants';
+import ListeRestau from'./components/ListeRestau';
 import ContactForm from './components/ContactForm';
 
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
+
+  const restaurants = [
+    {id:1,image:require("../assets/restaurant1.png"),titre: "Bonjour", description: "description"},
+    {id:2,image:require("../assets/restaurant1.png"),titre: "Bonjour", description: "description"},
+    {id:3,image:require("../assets/restaurant1.png"),titre: "Bonjour", description: "description"}
+  ]
+
   return (
     <Tab.Navigator
       initialRouteName="ContactForm"
@@ -18,7 +25,7 @@ function MyTabs() {
     >
       <Tab.Screen
         name="Restaurants"
-        component={Restaurants}
+        children={()=><ListeRestau restaurants={restaurants}/>}     
         options={{
           tabBarLabel: 'Restaurants',
           tabBarIcon: ({ color, size }) => (
