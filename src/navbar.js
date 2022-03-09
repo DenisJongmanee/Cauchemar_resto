@@ -1,7 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-
 import Recherche from'./components/Recherche';
 import ListeRestau from'./components/ListeRestau';
 import ContactForm from './components/ContactForm';

@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, StyleSheet, ScrollView } from 'react-native'
+import { StyleSheet, ScrollView } from 'react-native'
 import Restaurant from './Restau'
 
 const ListeRestau = ({ restaurants }) => (

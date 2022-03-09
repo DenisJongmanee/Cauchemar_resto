@@ -1,14 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import PropTypes from 'prop-types'
-import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  Button,
-  TouchableHighlight,
-  Image
-} from 'react-native'
+import { View, Text, StyleSheet, Image } from 'react-native'
 
 class Restaurant extends Component {
   state={

@@ -1,9 +1,7 @@
-    import React, { Component } from 'react';
-import reactDom from 'react-dom';
-    import { render } from 'react-dom';
-    import { StyleSheet, View, Text, Button, TextInput, ScrollView, Pressable } from 'react-native';
-    import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import Position from 'react-native/Libraries/Components/Touchable/Position';
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import { StyleSheet, View, Text, TextInput, ScrollView, Pressable } from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 class ContactForm extends Component {
 
@@ -20,54 +18,63 @@ class ContactForm extends Component {
     render() {
         return(
             <KeyboardAwareScrollView>
-                <View style={styles.content}>
-                    <ScrollView>
+                <ScrollView style={styles.content}>
                     <View style={styles.titreSection}>
                         <Text style={styles.titre}>Vous voulez nous partager un bon restaurant que vous déconseilleriez ?</Text>
                     </View>
                     <Text style={styles.alert}>
                         {this.state.message}
                     </Text>
-                    <Text>Adresse mail :</Text>
-                    <TextInput style={styles.input}
-                        value = {this.state.mail}
-                        onChangeText={(mail)=> this.setState({ mail: mail })} 
-                    />
-                    <Text>Nom :</Text>
-                    <TextInput style={styles.input}
-                        value = {this.state.nom}
-                        onChangeText={(nom)=> this.setState({ nom: nom })} 
-                    />
-                    <Text>Prénom :</Text>
-                    <TextInput style={styles.input}
-                        value = {this.state.prenom}
-                        onChangeText={(prenom)=> this.setState({ prenom: prenom })} 
-                    />
-                    <Text>Nom du restaurant :</Text>
-                    <TextInput style={styles.input}
-                        value = {this.state.nomResto}
-                        onChangeText={(nomResto)=> this.setState({ nomResto: nomResto })} 
-                    />
-                    <Text>Adresse du restaurant :</Text>
-                    <TextInput style={styles.InputAdresse}
-                        multiline={true}
-                        numberOfLines={3}
-                        value = {this.state.adresse}
-                        onChangeText={(adresse)=> this.setState({ adresse: adresse })} 
-                    />
-                    <Text>Pourquoi n'avez-vous pas aimé ?</Text>
-                    <TextInput style={styles.InputAvis}
-                        multiline={true}
-                        numberOfLines={5}
-                        value = {this.state.avis}
-                        onChangeText={(avis)=> this.setState({ avis: avis })} 
-                    />
+                    <View>
+                        <Text>Adresse mail :</Text>
+                        <TextInput style={styles.input}
+                            value = {this.state.mail}
+                            onChangeText={(mail)=> this.setState({ mail: mail })} 
+                        />
+                    </View>
+                    <View>
+                        <Text>Nom :</Text>
+                        <TextInput style={styles.input}
+                            value = {this.state.nom}
+                            onChangeText={(nom)=> this.setState({ nom: nom })} 
+                        />
+                    </View> 
+                    <View>
+                        <Text>Prénom :</Text>
+                        <TextInput style={styles.input}
+                            value = {this.state.prenom}
+                            onChangeText={(prenom)=> this.setState({ prenom: prenom })} 
+                        />
+                    </View>
+                    <View>
+                        <Text>Nom du restaurant :</Text>
+                        <TextInput style={styles.input}
+                            value = {this.state.nomResto}
+                            onChangeText={(nomResto)=> this.setState({ nomResto: nomResto })} 
+                        />
+                    </View>
+                    <View>
+                        <Text>Adresse du restaurant :</Text>
+                        <TextInput style={styles.InputAdresse}
+                            multiline={true}
+                            numberOfLines={3}
+                            value = {this.state.adresse}
+                            onChangeText={(adresse)=> this.setState({ adresse: adresse })} 
+                        />
+                    </View>
+                    <View>
+                        <Text>Pourquoi n'avez-vous pas aimé ?</Text>
+                        <TextInput style={styles.InputAvis}
+                            multiline={true}
+                            numberOfLines={5}
+                            value = {this.state.avis}
+                            onChangeText={(avis)=> this.setState({ avis: avis })} 
+                        />
+                    </View>
                     <Pressable style={styles.button} onPress={this.verification}>
                         <Text style={styles.textButton}>Envoyer</Text>
                     </Pressable>
-                    
-                    </ScrollView>
-                </View>
+                </ScrollView>
             </KeyboardAwareScrollView>
         );
     }

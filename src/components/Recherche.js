@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import reactDom from 'react-dom';
-    import { render } from 'react-dom';
-    import { StyleSheet, View, Text, Button, TextInput, ScrollView, Pressable } from 'react-native';
-    import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import Position from 'react-native/Libraries/Components/Touchable/Position';
+import { render } from 'react-dom';
+import { StyleSheet, View, Text, Button, TextInput, ScrollView, Pressable } from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import ListeRestau from './ListeRestau';
-import Restaurant from './Restau';
+
 
 class Recherche extends Component {
 
@@ -33,10 +31,8 @@ class Recherche extends Component {
         );
     }
 
-    filtre = () => {
-        this.setState({ restaurants: this.props.restaurants.filter(restaurant => restaurant.ville === this.state.recherche) })
-    }
-
+    filtre = () => this.setState({ restaurants: this.props.restaurants.filter(restaurant => restaurant.ville === this.state.recherche) })
+    
 }
 
 const styles = StyleSheet.create({
