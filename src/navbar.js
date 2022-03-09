@@ -16,7 +16,7 @@ function MyTabs() {
     {id:3,image:require("../assets/restaurant3.png"),titre: "Le gras Vie et...", description: "Burger avec gras implanté à la piqûres et changement de toiture à prévoir",ville:"Marseille"},
     {id:4,image:require("../assets/restaurant4.png"),titre: "Végan de toi", description: "Besoin de déserbant pour ce restaurant végan. Feuille de salade trop sèche.",ville:"Bordeaux"},
     {id:5,image:require("../assets/restaurant5.png"),titre: "Le Plaine Air", description: "Manque de chauffage et les fenêtre cassée n'aide pas.", ville:"Lille"},
-    {id:6,image:require("../assets/restaurant6.png"),titre: "Un titanic nouvelle Génération...", description: "Tueur en série devant le restaurant, accueil à revoir.", ville:"Lille"},
+    {id:6,image:require("../assets/restaurant6.png"),titre: "Un titanic V2", description: "Tueur en série devant le restaurant, accueil à revoir.", ville:"Lille"},
     {id:7,image:require("../assets/restaurant7.png"),titre: "Le Plaine Air", description: "L'aviateur est incompétent tout comme la cuisine. Crash assuré.", ville:"Lille"}
   ]
 
