@@ -1,15 +1,19 @@
 import React, { Component, Fragment } from 'react'
-import { View, Text, StyleSheet, Image } from 'react-native'
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 class Restaurant extends Component {
   state={
     restau:this.props.restaurant
   }
   render() {
+    console.log(this.props)
     const {restau} = this.state;
     return (
-      <View style={styles.restau}>
-        <Image style={styles.image} source={restau.image}/>
+      <View style={styles.restau} >
+        <TouchableOpacity onPress={()=> this.props.navigation.navigate('DetailsRestau')}>
+          <text>text</text>
+        </TouchableOpacity>
+        <Image style={styles.image} source={restau.image} onPress={()=> this.props.navigation.navigate('DetailsRestau')}/>
         <View style={styles.text}>
           <View>
             <Text style={styles.titre}>{restau.titre}</Text>
